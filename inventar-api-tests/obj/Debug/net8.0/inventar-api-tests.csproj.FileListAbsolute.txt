@@ -455,3 +455,4 @@ D:\mycode\projects\inventar-api\inventar-api-tests\obj\Debug\net8.0\refint\inven
 D:\mycode\projects\inventar-api\inventar-api-tests\obj\Debug\net8.0\inventar-api-tests.pdb
 D:\mycode\projects\inventar-api\inventar-api-tests\obj\Debug\net8.0\inventar-api-tests.genruntimeconfig.cache
 D:\mycode\projects\inventar-api\inventar-api-tests\obj\Debug\net8.0\ref\inventar-api-tests.dll
+D:\mycode\projects\inventar-api\inventar-api-tests\obj\Debug\net8.0\inventar-api-tests.sourcelink.json

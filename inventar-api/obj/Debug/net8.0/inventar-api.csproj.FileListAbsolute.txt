@@ -67,3 +67,4 @@ D:\mycode\projects\inventar-api\inventar-api\obj\Debug\net8.0\refint\inventar-ap
 D:\mycode\projects\inventar-api\inventar-api\obj\Debug\net8.0\inventar-api.pdb
 D:\mycode\projects\inventar-api\inventar-api\obj\Debug\net8.0\inventar-api.genruntimeconfig.cache
 D:\mycode\projects\inventar-api\inventar-api\obj\Debug\net8.0\ref\inventar-api.dll
+D:\mycode\projects\inventar-api\inventar-api\obj\Debug\net8.0\inventar-api.sourcelink.json
