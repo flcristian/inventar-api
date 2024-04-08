@@ -28,6 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="ArticleLocations\Integration\" />
       <Folder Include="Articles\Integration\" />
       <Folder Include="Locations\Integration\" />
     </ItemGroup>

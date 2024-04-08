@@ -6,5 +6,6 @@
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Unit.ArticlesCommandServiceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Unit.LocationsQueryServiceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Unit.LocationsCommandServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.ArticleLocations.Unit.ArticleLocationsQueryServiceTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
