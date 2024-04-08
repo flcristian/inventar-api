@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "7GI5rV/cdZQAeVFS1V2AuFIjlC00SfKEcC5A+5J4iQQ=",
+  "Source": "inventar-api",
+  "BasePath": "_content/inventar-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
