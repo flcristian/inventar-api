@@ -24,7 +24,7 @@ public class ArticlesRepository : IArticlesRepository
             .Include(a => a.ArticleLocations)
             .ToListAsync();
     }
-
+    
     public async Task<Article?> GetByCodeAsync(int code)
     {
         return await _context.Articles

@@ -2,9 +2,9 @@ namespace inventar_api.ArticleLocations.DTOs;
 
 public class CreateArticleLocationRequest
 {
-    public int ArticleId { get; set; }
+    public int ArticleCode { get; set; }
 
-    public int LocationId { get; set; }
+    public string LocationCode { get; set; }
     
     public int Count { get; set; }
 }

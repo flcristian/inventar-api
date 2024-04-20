@@ -2,17 +2,19 @@ using AutoMapper;
 using inventar_api.ArticleLocations.DTOs;
 using inventar_api.ArticleLocations.Models;
 using inventar_api.ArticleLocations.Repository.Interfaces;
+using inventar_api.Articles.Models;
 using inventar_api.Data;
+using inventar_api.Locations.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace inventar_api.ArticleLocations.Repository;
 
-public class ArticlesLocationRepository : IArticleLocationsRepository
+public class ArticleLocationsRepository : IArticleLocationsRepository
 {
     private AppDbContext _context;
     private IMapper _mapper;
 
-    public ArticlesLocationRepository(AppDbContext context, IMapper mapper)
+    public ArticleLocationsRepository(AppDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -35,7 +37,16 @@ public class ArticlesLocationRepository : IArticleLocationsRepository
 
     public async Task<ArticleLocation> CreateAsync(CreateArticleLocationRequest request)
     {
-        ArticleLocation articleLocation = _mapper.Map<ArticleLocation>(request);
+        Article article = (await _context.Articles.FirstOrDefaultAsync(a => a.Code == request.ArticleCode))!;
+        Location location = (await _context.Locations.FirstOrDefaultAsync(a => a.Code.Equals(request.LocationCode)))!;
+
+        ArticleLocation articleLocation = new ArticleLocation
+        {
+            ArticleId = article.Id,
+            LocationId = location.Id,
+            Count = request.Count
+        };
+        
         _context.ArticleLocations.Add(articleLocation);
         await _context.SaveChangesAsync();
         return articleLocation;
@@ -43,8 +54,11 @@ public class ArticlesLocationRepository : IArticleLocationsRepository
 
     public async Task<ArticleLocation> UpdateAsync(UpdateArticleLocationRequest request)
     {
+        Article article = (await _context.Articles.FirstOrDefaultAsync(a => a.Code == request.ArticleCode))!;
+        Location location = (await _context.Locations.FirstOrDefaultAsync(a => a.Code.Equals(request.LocationCode)))!;
+        
         ArticleLocation articleLocation = (await _context.ArticleLocations.FirstOrDefaultAsync(al =>
-            al.ArticleId == request.ArticleId && al.LocationId == request.LocationId))!;
+            al.ArticleId == article.Id && al.LocationId == location.Id))!;
 
         articleLocation.Count = request.Count;
         _context.ArticleLocations.Update(articleLocation);

@@ -1,10 +1,22 @@
 using FluentMigrator.Runner;
+using inventar_api.ArticleLocations.Repository;
+using inventar_api.ArticleLocations.Repository.Interfaces;
+using inventar_api.ArticleLocations.Services;
+using inventar_api.ArticleLocations.Services.Interfaces;
+using inventar_api.Articles.Repository;
+using inventar_api.Articles.Repository.Interfaces;
+using inventar_api.Articles.Services;
+using inventar_api.Articles.Services.Interfaces;
 using inventar_api.Data;
+using inventar_api.Locations.Repository;
+using inventar_api.Locations.Repository.Interfaces;
+using inventar_api.Locations.Services;
+using inventar_api.Locations.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace inventar_api;
 
-internal class Program
+public class Program
 {
     public static void Main(string[] args)
     {
@@ -14,6 +26,20 @@ internal class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        // SERVICES AND REPOSITORIES
+        
+        builder.Services.AddScoped<ILocationsRepository, LocationsRepository>();
+        builder.Services.AddScoped<ILocationsQueryService, LocationsQueryService>();
+        builder.Services.AddScoped<ILocationsCommandService, LocationsCommandService>();
+
+        builder.Services.AddScoped<IArticlesRepository, ArticlesRepository>();
+        builder.Services.AddScoped<IArticlesQueryService, ArticlesQueryService>();
+        builder.Services.AddScoped<IArticlesCommandService, ArticlesCommandService>();
+        
+        builder.Services.AddScoped<IArticleLocationsRepository, ArticleLocationsRepository>();
+        builder.Services.AddScoped<IArticleLocationsQueryService, ArticleLocationsQueryService>();
+        builder.Services.AddScoped<IArticleLocationsCommandService, ArticleLocationsCommandService>();
+        
         #region BASE
 
         builder.Services.AddCors(options =>

@@ -32,8 +32,8 @@ public static class TestArticleLocationHelper
     {
         return new CreateArticleLocationRequest
         {
-            ArticleId = id,
-            LocationId = id,
+            ArticleCode = id,
+            LocationCode = $"{id}",
             Count = 10
         };
     }
@@ -42,8 +42,8 @@ public static class TestArticleLocationHelper
     {
         return new UpdateArticleLocationRequest
         {
-            ArticleId = id,
-            LocationId = id,
+            ArticleCode = id,
+            LocationCode = $"{id}",
             Count = 10
         };
     }

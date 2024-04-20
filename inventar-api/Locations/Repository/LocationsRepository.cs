@@ -24,7 +24,7 @@ public class LocationsRepository : ILocationsRepository
             .Include(l => l.ArticleLocations)
             .ToListAsync();
     }
-
+    
     public async Task<Location?> GetByCodeAsync(string code)
     {
         return await _context.Locations

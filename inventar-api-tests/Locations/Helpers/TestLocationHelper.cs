@@ -1,3 +1,4 @@
+using inventar_api.ArticleLocations.Models;
 using inventar_api.Locations.DTOs;
 using inventar_api.Locations.Models;
 
@@ -22,7 +23,8 @@ public static class TestLocationHelper
         return new Location
         {
             Id = id,
-            Code = $"{id}"
+            Code = $"{id}",
+            ArticleLocations = new List<ArticleLocation>()
         };
     }
 

@@ -8,7 +8,7 @@ public class LocationEqualityComparer : IEqualityComparer<Location>
         if (ReferenceEquals(x, null)) return false;
         if (ReferenceEquals(y, null)) return false;
         if (x.GetType() != y.GetType()) return false;
-        return x.Id == y.Id && x.Code == y.Code && x.ArticleLocations.Equals(y.ArticleLocations);
+        return x.Id == y.Id && x.Code == y.Code;
     }
 
     public int GetHashCode(Location obj)

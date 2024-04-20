@@ -8,7 +8,7 @@ public class ArticleEqualityComparer : IEqualityComparer<Article>
         if (ReferenceEquals(x, null)) return false;
         if (ReferenceEquals(y, null)) return false;
         if (x.GetType() != y.GetType()) return false;
-        return x.Id == y.Id && x.Code == y.Code && x.Name == y.Name && x.Consumption == y.Consumption && x.Machinery == y.Machinery && x.ArticleLocations.Equals(y.ArticleLocations);
+        return x.Id == y.Id && x.Code == y.Code && x.Name == y.Name && x.Consumption == y.Consumption && x.Machinery == y.Machinery;
     }
 
     public int GetHashCode(Article obj)

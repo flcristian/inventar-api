@@ -1,11 +1,27 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\qflor\AppData\Local\JetBrains\Rider2023.3\resharper-host\temp\Rider\vAny\CoverageData\_inventar-api.-1932355983\Snapshot\snapshot.utdcvr</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=88d76157_002Dc653_002D45c4_002D9b30_002Dd91dec3972d9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ArticlesQueryServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1ed84f40_002D9de7_002D4c38_002Db91d_002D1fd3ef7b4d85/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests.Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=88d76157_002Dc653_002D45c4_002D9b30_002Dd91dec3972d9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ArticlesQueryServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Unit.ArticlesQueryServiceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Unit.ArticlesCommandServiceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Unit.LocationsQueryServiceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Unit.LocationsCommandServiceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.ArticleLocations.Unit.ArticleLocationsQueryServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.ArticleLocations.Unit.ArticleLocationsCommandServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Unit.LocationsControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Unit.ArticlesControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.ArticleLocations.Unit.ArticleLocationsControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests.Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea1930ac_002D4f77_002D405f_002Da366_002Dedf76db11a34/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
