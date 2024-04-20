@@ -128,4 +128,23 @@ public class LocationsIntegrationTests : IClassFixture<ApiWebApplicationFactory>
         
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
+    
+    [Fact]
+    public async Task Delete_DeleteLocation_LocationFound_ReturnsAcceptedStatusCode()
+    {
+        var createRequest = "/api/v1/Locations/create";
+        CreateLocationRequest request = TestLocationHelper.CreateCreateLocationRequest(8);
+        var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+        await _client.PostAsync(createRequest, content);
+        
+        var deleteRequest = "/api/v1/Locations/delete/";
+        
+        var response = await _client.DeleteAsync(deleteRequest + "8");
+        
+        Assert.Equal(HttpStatusCode.Accepted, response.StatusCode);
+        var responseString = await response.Content.ReadAsStringAsync();
+        var result = JsonConvert.DeserializeObject<Location>(responseString);
+        var location = TestLocationHelper.CreateLocation(8);
+        Assert.Equal(location.Code, result.Code);
+    }
 }

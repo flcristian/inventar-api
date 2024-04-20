@@ -88,6 +88,11 @@ public class ArticlesController : ArticlesApiController
 
             return Accepted(ResponseMessages.ARTICLE_UPDATED, article);
         }
+        catch (InvalidValue ex)
+        {
+            _logger.LogInformation($"400 Rest Response: {ex.Message}");
+            return BadRequest(ex.Message);
+        }
         catch (ItemDoesNotExist ex)
         {
             _logger.LogInformation($"404 Rest Response: {ex.Message}");

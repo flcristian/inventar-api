@@ -23,5 +23,18 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea1930ac_002D4f77_002D405f_002Da366_002Dedf76db11a34/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticles_ArticlesDoNotExist_ReturnsNotFoundStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticles_ArticlesExist_ReturnsOkStatusCode_ValidArticlesContentResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticleByCode_ArticleNotFound_ReturnsNotFoundStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticleByCode_ArticleFound_ReturnsOkStatusCode_ValidArticleContentResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_CreateArticle_CodeAlreadyUsed_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_CreateArticle_ValidRequest_ReturnsCreatedStatusCode_ValidArticleContentResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_CreateArticle_InvalidArticleCode_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Delete_DeleteArticle_ArticleNotFound_ReturnsNotFoundStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Delete_DeleteArticle_ArticleFound_ReturnsAcceptedStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_UpdateArticle_InvalidArticleCode_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Put_UpdateArticle_InvalidArticleCode_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Put_UpdateArticle_CodeAlreadyUsed_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Put_UpdateArticle_ValidRequest_ReturnsUpdatedStatusCode_ValidArticleContentResponse&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

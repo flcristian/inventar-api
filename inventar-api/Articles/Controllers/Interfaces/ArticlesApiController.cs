@@ -25,6 +25,7 @@ public abstract class ArticlesApiController : ControllerBase
     
     [HttpPut("update")]
     [ProducesResponseType(statusCode:202,type:typeof(Article))]
+    [ProducesResponseType(statusCode:400,type:typeof(String))]
     [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<Article>> UpdateArticle([FromBody]UpdateArticleRequest request);
     
