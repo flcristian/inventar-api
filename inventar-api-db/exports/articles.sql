@@ -1,0 +1,15 @@
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (2, 48532902, 'Granite', 'Ranitidine', 'Scraper');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (3, 60327296, 'Granite', 'Oxycodone hydrochloride and Acetaminophen', 'Backhoe');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (4, 10258894, 'Plexiglass', 'Losartan Potassium', 'Crawler');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (5, 4902444, 'Rubber', 'Magnesium Hydroxide', 'Trencher');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (7, 33237676, 'Steel', 'Acetaminophen, Chlorpheniramine maleate, Phenylephrine HCl', 'Dump Truck');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (9, 88122813, 'Glass', 'Iohexol', 'Excavator');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (10, 24135581, 'Vinyl', 'NAPHAZOLINE HYDROCHLORIDE', 'Dump Truck');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (12, 80268599, 'Vinyl', 'dalteparin sodium', 'Trencher');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (14, 96167134, 'Wood', 'Menthol', 'Crawler');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (15, 31904139, 'Rubber', 'Naproxen Sodium', 'Excavator');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (16, 42364129, 'Steel', 'simvastatin', 'Crawler');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (18, 19478117, 'Plexiglass', 'ABIES NIGRA', 'Crawler');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (19, 41540072, 'Vinyl', 'Levothyroxine Sodium', 'Grader');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (20, 88219683, 'Wood', 'Quetiapine fumarate', 'Bulldozer');
+INSERT INTO inventar_api.articles (id, code, name, consumption, machinery) VALUES (21, 8912481, 'Cuie 200mm', '-', '-');

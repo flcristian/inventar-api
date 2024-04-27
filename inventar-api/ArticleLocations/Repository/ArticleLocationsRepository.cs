@@ -2,9 +2,7 @@ using AutoMapper;
 using inventar_api.ArticleLocations.DTOs;
 using inventar_api.ArticleLocations.Models;
 using inventar_api.ArticleLocations.Repository.Interfaces;
-using inventar_api.Articles.Models;
 using inventar_api.Data;
-using inventar_api.Locations.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace inventar_api.ArticleLocations.Repository;
@@ -37,13 +35,10 @@ public class ArticleLocationsRepository : IArticleLocationsRepository
 
     public async Task<ArticleLocation> CreateAsync(CreateArticleLocationRequest request)
     {
-        Article article = (await _context.Articles.FirstOrDefaultAsync(a => a.Code == request.ArticleCode))!;
-        Location location = (await _context.Locations.FirstOrDefaultAsync(a => a.Code.Equals(request.LocationCode)))!;
-
         ArticleLocation articleLocation = new ArticleLocation
         {
-            ArticleId = article.Id,
-            LocationId = location.Id,
+            ArticleCode = request.ArticleCode,
+            LocationCode = request.LocationCode,
             Count = request.Count
         };
         
@@ -54,11 +49,8 @@ public class ArticleLocationsRepository : IArticleLocationsRepository
 
     public async Task<ArticleLocation> UpdateAsync(UpdateArticleLocationRequest request)
     {
-        Article article = (await _context.Articles.FirstOrDefaultAsync(a => a.Code == request.ArticleCode))!;
-        Location location = (await _context.Locations.FirstOrDefaultAsync(a => a.Code.Equals(request.LocationCode)))!;
-        
         ArticleLocation articleLocation = (await _context.ArticleLocations.FirstOrDefaultAsync(al =>
-            al.ArticleId == article.Id && al.LocationId == location.Id))!;
+            al.ArticleCode == request.ArticleCode && al.LocationCode.Equals(request.LocationCode)))!;
 
         articleLocation.Count = request.Count;
         _context.ArticleLocations.Update(articleLocation);

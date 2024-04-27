@@ -22,8 +22,8 @@ public static class TestArticleLocationHelper
         return new ArticleLocation
         {
             Id = id,
-            ArticleId = id,
-            LocationId = id,
+            ArticleCode = id,
+            LocationCode = $"{id}",
             Count = 10
         };
     }

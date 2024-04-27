@@ -18,13 +18,15 @@ public class AppDbContext: DbContext
         modelBuilder.Entity<ArticleLocation>()
             .HasOne(al => al.Article)
             .WithMany(a => a.ArticleLocations)
-            .HasForeignKey(al => al.ArticleId)
+            .HasForeignKey(al => al.ArticleCode)
+            .HasPrincipalKey(a => a.Code)
             .OnDelete(DeleteBehavior.Cascade);
         
         modelBuilder.Entity<ArticleLocation>()
             .HasOne(al => al.Location)
             .WithMany(l => l.ArticleLocations)
-            .HasForeignKey(al => al.LocationId)
+            .HasForeignKey(al => al.LocationCode)
+            .HasPrincipalKey(l => l.Code)
             .OnDelete(DeleteBehavior.Cascade);
     }
 }

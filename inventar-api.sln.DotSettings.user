@@ -1,11 +1,16 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\qflor\AppData\Local\JetBrains\Rider2023.3\resharper-host\temp\Rider\vAny\CoverageData\_inventar-api.-1932355983\Snapshot\snapshot.utdcvr</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1ed84f40_002D9de7_002D4c38_002Db91d_002D1fd3ef7b4d85/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests.Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=85f1f116_002Df2b2_002D48d1_002D8a2f_002D0c4647432f47/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetArticleLocationByCode_ArticleLocationFound_ReturnsOkStatusCode_ValidArticleLocationContentResponse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6135459d_002Da6be_002D4b44_002Db5f2_002D32d3baac4bc9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateArticleLocation_ValidRequest_ReturnsUpdatedStatusCode_ValidArticleLocationContentResponse #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.ArticleLocations.Integration.ArticleLocationsIntegrationTests.UpdateArticleLocation_ValidRequest_ReturnsUpdatedStatusCode_ValidArticleLocationContentResponse&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=85f1f116_002Df2b2_002D48d1_002D8a2f_002D0c4647432f47/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetArticleLocationByCode_ArticleLocationFound_ReturnsOkStatusCode_ValidArticleLocationContentResponse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.ArticleLocations.Integration.ArticleLocationsIntegrationTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
@@ -25,22 +30,9 @@
     &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e1ca6021_002Dc5fe_002D4f62_002Db5bd_002D0648519e2216/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="UpdateArticleLocation_ValidRequest_ReturnsUpdatedStatusCode_ValidArticleLocationContentResponse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="D:\mycode\projects\inventar\inventar-api\inventar-api-tests" Presentation="&amp;lt;inventar-api-tests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea1930ac_002D4f77_002D405f_002Da366_002Dedf76db11a34/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Get_GetAll_ProductsFound_ReturnsOkStatusCode_ValidProductsContentResponse #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Locations.Integration.LocationsIntegrationTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticles_ArticlesDoNotExist_ReturnsNotFoundStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticles_ArticlesExist_ReturnsOkStatusCode_ValidArticlesContentResponse&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticleByCode_ArticleNotFound_ReturnsNotFoundStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Get_GetArticleByCode_ArticleFound_ReturnsOkStatusCode_ValidArticleContentResponse&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_CreateArticle_CodeAlreadyUsed_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_CreateArticle_ValidRequest_ReturnsCreatedStatusCode_ValidArticleContentResponse&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_CreateArticle_InvalidArticleCode_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Delete_DeleteArticle_ArticleNotFound_ReturnsNotFoundStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Delete_DeleteArticle_ArticleFound_ReturnsAcceptedStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Post_UpdateArticle_InvalidArticleCode_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Put_UpdateArticle_InvalidArticleCode_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Put_UpdateArticle_CodeAlreadyUsed_ReturnsBadRequestStatusCode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.Articles.Integration.ArticlesIntegrationTests.Put_UpdateArticle_ValidRequest_ReturnsUpdatedStatusCode_ValidArticleContentResponse&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2CA9E392-1DDD-4FB1-B0E7-0109F641296F::net8.0::inventar_api_tests.ArticleLocations.Integration.ArticleLocationsIntegrationTests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="D:\mycode\projects\inventar\inventar-api\inventar-api-tests" Presentation="&amp;lt;inventar-api-tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

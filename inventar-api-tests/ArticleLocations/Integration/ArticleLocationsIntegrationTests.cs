@@ -196,9 +196,7 @@ public class ArticleLocationsIntegrationTests : IClassFixture<ApiWebApplicationF
 
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
-
         
-        // PROBLEMA
         [Fact]
         public async Task UpdateArticleLocation_ValidRequest_ReturnsUpdatedStatusCode_ValidArticleLocationContentResponse()
         {
@@ -214,10 +212,13 @@ public class ArticleLocationsIntegrationTests : IClassFixture<ApiWebApplicationF
             var createRequest = "/api/v1/ArticleLocations/create";
             CreateArticleLocationRequest createRequestDto = TestArticleLocationHelper.CreateCreateArticleLocationRequest(11);
             var createRequestContent = new StringContent(JsonConvert.SerializeObject(createRequestDto), Encoding.UTF8, "application/json");
-            await _client.PostAsync(createRequest, createRequestContent);
+            var createdResponse = await _client.PostAsync(createRequest, createRequestContent);
 
+            var responseString = await createdResponse.Content.ReadAsStringAsync();
+            var created = JsonConvert.DeserializeObject<ArticleLocation>(responseString);
+            
             var updateRequest = "/api/v1/ArticleLocations/update";
-            UpdateArticleLocationRequest request = TestArticleLocationHelper.CreateUpdateArticleLocationRequest(11);
+            UpdateArticleLocationRequest request = TestArticleLocationHelper.CreateUpdateArticleLocationRequest(created.Id);
             var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
 
             var response = await _client.PutAsync(updateRequest, content);
@@ -256,7 +257,7 @@ public class ArticleLocationsIntegrationTests : IClassFixture<ApiWebApplicationF
             await _client.PostAsync(createRequest, content);
 
             var deleteRequest = "/api/v1/ArticleLocations/delete?articleCode=13&locationCode=13";
-
+    
             var response = await _client.DeleteAsync(deleteRequest);
 
             Assert.Equal(HttpStatusCode.Accepted, response.StatusCode);

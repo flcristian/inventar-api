@@ -7283,11 +7283,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\mycode\\projects\\inventar-api\\inventar-api\\inventar-api.csproj",
+      "projectUniqueName": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api\\inventar-api.csproj",
       "projectName": "inventar-api",
-      "projectPath": "D:\\mycode\\projects\\inventar-api\\inventar-api\\inventar-api.csproj",
+      "projectPath": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api\\inventar-api.csproj",
       "packagesPath": "C:\\Users\\qflor\\.nuget\\packages\\",
-      "outputPath": "D:\\mycode\\projects\\inventar-api\\inventar-api\\obj\\",
+      "outputPath": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

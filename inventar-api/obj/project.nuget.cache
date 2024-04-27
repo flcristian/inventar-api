@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HwmeLqlPEEUh4sdfMoTtsK6/ysOnL4HtjGLbuQZCC5TfmdU1uSCOXnfsPXBFtx9yZOELDsFKnCQ0hyZNf4ei9A==",
+  "dgSpecHash": "9j+V44jBmBa0Hw7CKp4sbN9VyVGbQiweKfJeHIlVizbXPcQnnoz5Yrr4xGD5yTbvy/AJz0PbxJasz5eFcsFrWw==",
   "success": true,
-  "projectFilePath": "D:\\mycode\\projects\\inventar-api\\inventar-api\\inventar-api.csproj",
+  "projectFilePath": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api\\inventar-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\qflor\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\qflor\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

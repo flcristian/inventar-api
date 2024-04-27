@@ -15,15 +15,15 @@ public class ArticleLocation
     public int Id { get; set; }
     
     [Required]
-    [Column("articleId")]
-    public int ArticleId { get; set; }
+    [Column("articleCode")]
+    public int ArticleCode { get; set; }
     
     [JsonIgnore]
     public virtual Article Article { get; set; }
     
     [Required]
-    [Column("locationId")]
-    public int LocationId { get; set; }
+    [Column("locationCode")]
+    public string LocationCode { get; set; }
     
     [JsonIgnore]
     public virtual Location Location { get; set; }
