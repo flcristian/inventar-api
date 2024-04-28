@@ -31,9 +31,7 @@ public class TablesInitialization : Migration
         Create.Table("articles")
             .WithColumn("id").AsInt32().PrimaryKey().Identity()
             .WithColumn("code").AsInt32().NotNullable().Unique()
-            .WithColumn("name").AsString(128).NotNullable()
-            .WithColumn("consumption").AsString(128).NotNullable()
-            .WithColumn("machinery").AsString(128).NotNullable();
+            .WithColumn("name").AsString(128).NotNullable();
     }
 
     private void CreateLocationsTable()

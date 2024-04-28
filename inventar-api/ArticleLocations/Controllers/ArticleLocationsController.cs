@@ -39,6 +39,23 @@ public class ArticleLocationsController : ArticleLocationsApiController
         }
     }
 
+    public override async Task<ActionResult<IEnumerable<ArticleLocation>>> GetStockHistory()
+    {
+        _logger.LogInformation("GET Rest Request: Get stock history.");
+
+        try
+        {
+            IEnumerable<ArticleLocationHistory> alh = await _queryService.GetStockHistory();
+
+            return Ok(alh);
+        }
+        catch (ItemsDoNotExist ex)
+        {
+            _logger.LogInformation($"404 Rest Response: {ex.Message}");
+            return NotFound(ex.Message);
+        }
+    }
+
     public override async Task<ActionResult<ArticleLocation>> GetArticleLocation(int articleCode, string locationCode)
     {
         _logger.LogInformation($"GET Rest Request: Get article location with article code {articleCode} and location code {locationCode}.");
@@ -71,6 +88,28 @@ public class ArticleLocationsController : ArticleLocationsApiController
             ArticleLocation articleLocation = await _commandService.CreateArticleLocation(request);
 
             return Created(ResponseMessages.ARTICLE_LOCATION_CREATED, articleLocation);
+        }
+        catch (InvalidValue ex)
+        {
+            _logger.LogInformation($"400 Rest Response: {ex.Message}");
+            return BadRequest(ex.Message);
+        }
+        catch (ItemDoesNotExist ex)
+        {
+            _logger.LogInformation($"404 Rest Response: {ex.Message}");
+            return BadRequest(ex.Message);
+        }
+    }
+
+    public override async Task<ActionResult<ArticleLocation>> CreateStockHistory(CreateStockHistoryRequest request)
+    {
+        _logger.LogInformation("POST Rest Request: Create stock history.");
+
+        try
+        {
+            ArticleLocationHistory alh = await _commandService.CreateStockHistory(request);
+
+            return Created(ResponseMessages.ARTICLE_LOCATION_CREATED, alh);
         }
         catch (InvalidValue ex)
         {
@@ -121,6 +160,23 @@ public class ArticleLocationsController : ArticleLocationsApiController
             ArticleLocation articleLocation = await _commandService.DeleteArticleLocation(request);
 
             return Accepted(ResponseMessages.ARTICLE_LOCATION_DELETED, articleLocation);
+        }
+        catch (ItemDoesNotExist ex)
+        {
+            _logger.LogInformation($"404 Rest Response: {ex.Message}");
+            return NotFound(ex.Message);
+        }
+    }
+
+    public override async Task<ActionResult<ArticleLocation>> DeleteStockHistory(int id)
+    {
+        _logger.LogInformation("DELETE Rest Request: Delete stock history.");
+
+        try
+        {
+            ArticleLocationHistory alh = await _commandService.DeleteStockHistory(id);
+
+            return Accepted(ResponseMessages.ARTICLE_LOCATION_DELETED, alh);
         }
         catch (ItemDoesNotExist ex)
         {

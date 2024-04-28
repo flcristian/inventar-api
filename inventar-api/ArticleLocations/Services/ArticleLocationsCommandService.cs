@@ -45,6 +45,27 @@ public class ArticleLocationsCommandService : IArticleLocationsCommandService
         return result;
     }
 
+    public async Task<ArticleLocationHistory> CreateStockHistory(CreateStockHistoryRequest request)
+    {
+        if (request.StockIn < 0 || request.StockOut < 0 || request.Order < 0 || request.Necessary < 0)
+        {
+            throw new InvalidValue(ExceptionMessages.INVALID_STOCK_COUNT);
+        }
+        
+        if (await _articlesRepository.GetByCodeAsync(request.ArticleCode) == null)
+        {
+            throw new ItemDoesNotExist(ExceptionMessages.ARTICLE_DOES_NOT_EXIST);
+        }
+        
+        if (await _locationsRepository.GetByCodeAsync(request.LocationCode) == null)
+        {
+            throw new ItemDoesNotExist(ExceptionMessages.LOCATION_DOES_NOT_EXIST);
+        }
+
+        ArticleLocationHistory result = await _articleLocationsRepository.CreateHistoryAsync(request);
+        return result;
+    }
+
     public async Task<ArticleLocation> UpdateArticleLocation(UpdateArticleLocationRequest request)
     {
         if (request.Count < 0)
@@ -81,6 +102,17 @@ public class ArticleLocationsCommandService : IArticleLocationsCommandService
         }
 
         ArticleLocation result = await _articleLocationsRepository.DeleteAsync(request);
+        return result;
+    }
+
+    public async Task<ArticleLocationHistory> DeleteStockHistory(int id)
+    {
+        if (await _articleLocationsRepository.GetHistoryByIdAsync(id) == null)
+        {
+            throw new ItemDoesNotExist(ExceptionMessages.ARTICLE_LOCATION_DOES_NOT_EXIST);
+        }
+
+        ArticleLocationHistory result = await _articleLocationsRepository.DeleteHistoryAsync(id);
         return result;
     }
 }

@@ -8,11 +8,11 @@ public class ArticleEqualityComparer : IEqualityComparer<Article>
         if (ReferenceEquals(x, null)) return false;
         if (ReferenceEquals(y, null)) return false;
         if (x.GetType() != y.GetType()) return false;
-        return x.Id == y.Id && x.Code == y.Code && x.Name == y.Name && x.Consumption == y.Consumption && x.Machinery == y.Machinery;
+        return x.Id == y.Id && x.Code == y.Code && x.Name == y.Name;
     }
 
     public int GetHashCode(Article obj)
     {
-        return HashCode.Combine(obj.Id, obj.Code, obj.Name, obj.Consumption, obj.Machinery, obj.ArticleLocations);
+        return HashCode.Combine(obj.Id, obj.Code, obj.Name, obj.ArticleLocations);
     }
 }

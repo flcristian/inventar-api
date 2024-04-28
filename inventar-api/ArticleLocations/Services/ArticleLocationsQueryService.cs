@@ -28,6 +28,18 @@ public class ArticleLocationsQueryService : IArticleLocationsQueryService
         return result;
     }
 
+    public async Task<IEnumerable<ArticleLocationHistory>> GetStockHistory()
+    {
+        IEnumerable<ArticleLocationHistory> result = await _repository.GetHistoryAsync();
+
+        if (result.Count() == 0)
+        {
+            throw new ItemsDoNotExist(ExceptionMessages.NO_STOCK_HISTORY);
+        }
+
+        return result;
+    }
+
     public async Task<ArticleLocation> GetArticleLocation(GetArticleLocationRequest request)
     {
         ArticleLocation? result = await _repository.GetAsync(request);

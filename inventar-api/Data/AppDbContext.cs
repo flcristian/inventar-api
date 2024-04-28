@@ -12,6 +12,7 @@ public class AppDbContext: DbContext
     public virtual DbSet<Article> Articles { get; set; }
     public virtual DbSet<Location> Locations { get; set; }
     public virtual DbSet<ArticleLocation> ArticleLocations { get; set; }
+    public virtual DbSet<ArticleLocationHistory> ArticleLocationHistory { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,6 +27,20 @@ public class AppDbContext: DbContext
             .HasOne(al => al.Location)
             .WithMany(l => l.ArticleLocations)
             .HasForeignKey(al => al.LocationCode)
+            .HasPrincipalKey(l => l.Code)
+            .OnDelete(DeleteBehavior.Cascade);
+        
+        modelBuilder.Entity<ArticleLocationHistory>()
+            .HasOne(alh => alh.Article)
+            .WithMany(a => a.ArticleLocationHistory)
+            .HasForeignKey(alh => alh.ArticleCode)
+            .HasPrincipalKey(a => a.Code)
+            .OnDelete(DeleteBehavior.Cascade);
+        
+        modelBuilder.Entity<ArticleLocationHistory>()
+            .HasOne(alh => alh.Location)
+            .WithMany(l => l.ArticleLocationHistory)
+            .HasForeignKey(alh => alh.LocationCode)
             .HasPrincipalKey(l => l.Code)
             .OnDelete(DeleteBehavior.Cascade);
     }

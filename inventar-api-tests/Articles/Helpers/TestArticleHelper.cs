@@ -23,9 +23,7 @@ public static class TestArticleHelper
         {
             Id = id,
             Code = id,
-            Name = $"Article {id}",
-            Consumption = "",
-            Machinery = ""
+            Name = $"Article {id}"
         };
     }
     
@@ -34,9 +32,7 @@ public static class TestArticleHelper
         return new CreateArticleRequest
         {
             Code = id,
-            Name = $"Article {id}",
-            Consumption = "",
-            Machinery = ""
+            Name = $"Article {id}"
         };
     }
     
@@ -45,9 +41,7 @@ public static class TestArticleHelper
         return new UpdateArticleRequest
         {
             Code = id,
-            Name = $"Article {id}",
-            Consumption = "",
-            Machinery = ""
+            Name = $"Article {id}"
         };
     }
 }

@@ -23,6 +23,11 @@ public class ArticleLocationsRepository : IArticleLocationsRepository
         return await _context.ArticleLocations.ToListAsync();
     }
 
+    public async Task<IEnumerable<ArticleLocationHistory>> GetHistoryAsync()
+    {
+        return await _context.ArticleLocationHistory.ToListAsync();
+    }
+
     public async Task<ArticleLocation?> GetAsync(GetArticleLocationRequest request)
     {
         return await _context.ArticleLocations
@@ -31,6 +36,14 @@ public class ArticleLocationsRepository : IArticleLocationsRepository
             .FirstOrDefaultAsync(al =>
                 al.Article.Code == request.ArticleCode &&
                 al.Location.Code.Equals(request.LocationCode));
+    }
+
+    public async Task<ArticleLocationHistory?> GetHistoryByIdAsync(int id)
+    {
+        return await _context.ArticleLocationHistory
+            .Include(alh => alh.Article)
+            .Include(alh => alh.Location)
+            .FirstOrDefaultAsync(alh => alh.Id == id);
     }
 
     public async Task<ArticleLocation> CreateAsync(CreateArticleLocationRequest request)
@@ -45,6 +58,25 @@ public class ArticleLocationsRepository : IArticleLocationsRepository
         _context.ArticleLocations.Add(articleLocation);
         await _context.SaveChangesAsync();
         return articleLocation;
+    }
+
+    public async Task<ArticleLocationHistory> CreateHistoryAsync(CreateStockHistoryRequest request)
+    {
+        ArticleLocationHistory alh = new ArticleLocationHistory
+        {
+            Date = request.Date,
+            ArticleCode = request.ArticleCode,
+            LocationCode = request.LocationCode,
+            StockIn = request.StockIn,
+            StockOut = request.StockOut,
+            Order = request.Order,
+            Necessary = request.Necessary,
+            Source = request.Source
+        };
+        
+        _context.ArticleLocationHistory.Add(alh);
+        await _context.SaveChangesAsync();
+        return alh;
     }
 
     public async Task<ArticleLocation> UpdateAsync(UpdateArticleLocationRequest request)
@@ -64,5 +96,13 @@ public class ArticleLocationsRepository : IArticleLocationsRepository
         _context.ArticleLocations.Remove(articleLocation);
         await _context.SaveChangesAsync();
         return articleLocation;
+    }
+
+    public async Task<ArticleLocationHistory> DeleteHistoryAsync(int id)
+    {
+        ArticleLocationHistory alh = (await _context.ArticleLocationHistory.FirstOrDefaultAsync(alh => alh.Id == id))!;
+        _context.ArticleLocationHistory.Remove(alh);
+        await _context.SaveChangesAsync();
+        return alh;
     }
 }

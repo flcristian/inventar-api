@@ -13,5 +13,7 @@ public static class ExceptionMessages
     
     public const string ARTICLE_LOCATION_DOES_NOT_EXIST = "Article location does not exist.";
     public const string ARTICLE_LOCATIONS_DO_NOT_EXIST = "Article locations do not exist.";
+    public const string NO_STOCK_HISTORY = "There is no stock history.";
     public const string INVALID_ARTICLE_COUNT = "Article count is negative or not allowed.";
+    public const string INVALID_STOCK_COUNT = "Stock value is invalid or not allowed.";
 }

@@ -17,4 +17,5 @@ public class Location
     public string Code { get; set; }
         
     public virtual List<ArticleLocation> ArticleLocations { get; set; }
+    public virtual List<ArticleLocationHistory> ArticleLocationHistory { get; set; }
 }

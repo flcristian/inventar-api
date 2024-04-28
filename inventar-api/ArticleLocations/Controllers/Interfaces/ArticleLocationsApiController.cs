@@ -13,6 +13,11 @@ public abstract class ArticleLocationsApiController : ControllerBase
     [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<IEnumerable<ArticleLocation>>> GetArticleLocations();
     
+    [HttpGet("stock-history")]
+    [ProducesResponseType(statusCode:200,type:typeof(IEnumerable<ArticleLocationHistory>))]
+    [ProducesResponseType(statusCode:404,type:typeof(String))]
+    public abstract Task<ActionResult<IEnumerable<ArticleLocation>>> GetStockHistory();
+    
     [HttpGet("article_location")]
     [ProducesResponseType(statusCode:200,type:typeof(ArticleLocation))]
     [ProducesResponseType(statusCode:404,type:typeof(String))]
@@ -24,6 +29,12 @@ public abstract class ArticleLocationsApiController : ControllerBase
     [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<ArticleLocation>> CreateArticleLocation([FromBody]CreateArticleLocationRequest request);
     
+    [HttpPost("create-stock-history")]
+    [ProducesResponseType(statusCode:201,type:typeof(ArticleLocation))]
+    [ProducesResponseType(statusCode:400,type:typeof(String))]
+    [ProducesResponseType(statusCode:404,type:typeof(String))]
+    public abstract Task<ActionResult<ArticleLocation>> CreateStockHistory([FromBody]CreateStockHistoryRequest request);
+    
     [HttpPut("update")]
     [ProducesResponseType(statusCode:202,type:typeof(ArticleLocation))]
     [ProducesResponseType(statusCode:400,type:typeof(String))]
@@ -34,4 +45,10 @@ public abstract class ArticleLocationsApiController : ControllerBase
     [ProducesResponseType(statusCode:202,type:typeof(ArticleLocation))]
     [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<ArticleLocation>> DeleteArticleLocation([FromQuery]int articleCode, [FromQuery]string locationCode);
+    
+    [HttpDelete("delete-stock-history/{id}")]
+    [ProducesResponseType(statusCode:201,type:typeof(ArticleLocation))]
+    [ProducesResponseType(statusCode:400,type:typeof(String))]
+    [ProducesResponseType(statusCode:404,type:typeof(String))]
+    public abstract Task<ActionResult<ArticleLocation>> DeleteStockHistory([FromRoute]int id);
 }

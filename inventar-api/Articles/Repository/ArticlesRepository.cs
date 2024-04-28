@@ -44,8 +44,6 @@ public class ArticlesRepository : IArticlesRepository
     {
         Article article = (await GetByCodeAsync(request.Code))!;
         article.Name = request.Name;
-        article.Consumption = request.Consumption;
-        article.Machinery = request.Machinery;
 
         _context.Articles.Update(article);
         await _context.SaveChangesAsync();

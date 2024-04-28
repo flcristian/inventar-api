@@ -19,14 +19,7 @@ public class Article
     [Required]
     [Column("name")]
     public string Name { get; set; }
-    
-    [Required]
-    [Column("consumption")]
-    public string Consumption { get; set; }
-    
-    [Required]
-    [Column("machinery")]
-    public string Machinery { get; set; }
-    
+
     public virtual List<ArticleLocation> ArticleLocations { get; set; }
+    public virtual List<ArticleLocationHistory> ArticleLocationHistory { get; set; }
 }
