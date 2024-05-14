@@ -62,6 +62,28 @@ public class ArticleLocationsCommandService : IArticleLocationsCommandService
             throw new ItemDoesNotExist(ExceptionMessages.LOCATION_DOES_NOT_EXIST);
         }
 
+        ArticleLocation? al = await _articleLocationsRepository.GetAsync(new GetArticleLocationRequest
+            { ArticleCode = request.ArticleCode, LocationCode = request.LocationCode });
+        
+        if (al == null)
+        {
+            CreateArticleLocationRequest createRequest = new CreateArticleLocationRequest
+            {
+                ArticleCode = request.ArticleCode, LocationCode = request.LocationCode,
+                Count = request.StockIn - request.StockOut
+            };
+            await _articleLocationsRepository.CreateAsync(createRequest);
+        }
+        else
+        {
+            UpdateArticleLocationRequest updateRequest = new UpdateArticleLocationRequest
+            {
+                ArticleCode = request.ArticleCode, LocationCode = request.LocationCode,
+                Count = al.Count + request.StockIn - request.StockOut
+            };
+            await _articleLocationsRepository.UpdateAsync(updateRequest);
+        }
+
         ArticleLocationHistory result = await _articleLocationsRepository.CreateHistoryAsync(request);
         return result;
     }
@@ -107,9 +129,31 @@ public class ArticleLocationsCommandService : IArticleLocationsCommandService
 
     public async Task<ArticleLocationHistory> DeleteStockHistory(int id)
     {
-        if (await _articleLocationsRepository.GetHistoryByIdAsync(id) == null)
+        ArticleLocationHistory? history = await _articleLocationsRepository.GetHistoryByIdAsync(id);
+        if (history == null)
         {
             throw new ItemDoesNotExist(ExceptionMessages.ARTICLE_LOCATION_DOES_NOT_EXIST);
+        }
+        
+        ArticleLocation al = (await _articleLocationsRepository.GetAsync(new GetArticleLocationRequest
+            { ArticleCode = history.ArticleCode, LocationCode = history.LocationCode }))!;
+        
+        UpdateArticleLocationRequest updateRequest = new UpdateArticleLocationRequest
+        {
+            ArticleCode = history.ArticleCode, LocationCode = history.LocationCode,
+            Count = al.Count - history.StockIn + history.StockOut
+        };
+        
+        if (updateRequest.Count == 0)
+        {
+            await _articleLocationsRepository.DeleteAsync(new DeleteArticleLocationRequest
+            {
+                ArticleCode = history.ArticleCode, LocationCode = history.LocationCode
+            });
+        }
+        else
+        {
+            await _articleLocationsRepository.UpdateAsync(updateRequest);
         }
 
         ArticleLocationHistory result = await _articleLocationsRepository.DeleteHistoryAsync(id);
