@@ -89,7 +89,5 @@ public class Program
         app.UseCors("inventar-client");
 
         app.Run();
-        
-        //test
     }
 }
