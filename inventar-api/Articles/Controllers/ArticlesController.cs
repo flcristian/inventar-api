@@ -26,17 +26,9 @@ public class ArticlesController : ArticlesApiController
     {
         _logger.LogInformation("GET Rest Request: Get all articles.");
 
-        try
-        {
-            IEnumerable<Article> articles = await _queryService.GetAllArticles();
+        IEnumerable<Article> articles = await _queryService.GetAllArticles();
 
-            return Ok(articles);
-        }
-        catch (ItemsDoNotExist ex)
-        {
-            _logger.LogInformation($"404 Rest Response: {ex.Message}");
-            return NotFound(ex.Message);
-        }
+        return Ok(articles);
     }
 
     public override async Task<ActionResult<Article>> GetArticleByCode(int code)

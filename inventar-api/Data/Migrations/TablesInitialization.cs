@@ -17,10 +17,10 @@ public class TablesInitialization : Migration
     
     public override void Down()
     {
-        Delete.ForeignKey("FK_ArticleLocations_Location").OnTable("articleLocations");
-        Delete.ForeignKey("FK_ArticleLocations_Article").OnTable("articleLocations");
-        Delete.Index("IX_ArticleLocations_LocationId").OnTable("articleLocations");
-        Delete.Index("IX_ArticleLocations_ArticleId").OnTable("articleLocations");
+        Delete.ForeignKey("FK_ArticleLocations_Location").OnTable("articlelocations");
+        Delete.ForeignKey("FK_ArticleLocations_Article").OnTable("articlelocations");
+        Delete.Index("IX_ArticleLocations_LocationId").OnTable("articlelocations");
+        Delete.Index("IX_ArticleLocations_ArticleId").OnTable("articlelocations");
         Delete.Table("articlelocations");
         Delete.Table("locations");
         Delete.Table("articles");
@@ -52,13 +52,13 @@ public class TablesInitialization : Migration
 
     private void CreateIndexes()
     {
-        Create.Index("IX_ArticleLocations_ArticleCode").OnTable("articleLocations").OnColumn("articleCode").Ascending().WithOptions().NonClustered();
-        Create.Index("IX_ArticleLocations_LocationCode").OnTable("articleLocations").OnColumn("locationCode").Ascending().WithOptions().NonClustered();
+        Create.Index("IX_ArticleLocations_ArticleCode").OnTable("articlelocations").OnColumn("articleCode").Ascending().WithOptions().NonClustered();
+        Create.Index("IX_ArticleLocations_LocationCode").OnTable("articlelocations").OnColumn("locationCode").Ascending().WithOptions().NonClustered();
     }
 
     private void CreateForeignKeys()
     {
-        Create.ForeignKey("FK_ArticleLocations_Article").FromTable("articleLocations").ForeignColumn("articleCode").ToTable("articles").PrimaryColumn("code").OnDelete(Rule.Cascade);
-        Create.ForeignKey("FK_ArticleLocations_Location").FromTable("articleLocations").ForeignColumn("locationCode").ToTable("locations").PrimaryColumn("code").OnDelete(Rule.Cascade);
+        Create.ForeignKey("FK_ArticleLocations_Article").FromTable("articlelocations").ForeignColumn("articleCode").ToTable("articles").PrimaryColumn("code").OnDelete(Rule.Cascade);
+        Create.ForeignKey("FK_ArticleLocations_Location").FromTable("articlelocations").ForeignColumn("locationCode").ToTable("locations").PrimaryColumn("code").OnDelete(Rule.Cascade);
     }
 }

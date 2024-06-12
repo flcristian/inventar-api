@@ -44,7 +44,7 @@ public class Program
 
         builder.Services.AddCors(options =>
         {
-            options.AddPolicy("inventar-client", domain => domain.WithOrigins("http://localhost:4200")
+            options.AddPolicy("inventar-client", domain => domain.WithOrigins("http://localhost:4200", "http://clientapp")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
             );
@@ -74,9 +74,7 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-
         app.UseAuthorization();
-
         app.MapControllers();
 
         app.UseExceptionHandler("/Home/Error");

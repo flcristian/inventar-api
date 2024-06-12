@@ -19,11 +19,6 @@ public class LocationsQueryService : ILocationsQueryService
     {
         IEnumerable<Location> result = await _repository.GetAllAsync();
 
-        if (result.Count() == 0)
-        {
-            throw new ItemsDoNotExist(ExceptionMessages.LOCATIONS_DO_NOT_EXIST);
-        }
-
         return result;
     }
 

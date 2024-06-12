@@ -10,12 +10,10 @@ public abstract class ArticleLocationsApiController : ControllerBase
 {
     [HttpGet("all")]
     [ProducesResponseType(statusCode:200,type:typeof(IEnumerable<ArticleLocation>))]
-    [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<IEnumerable<ArticleLocation>>> GetArticleLocations();
     
     [HttpGet("stock-history")]
     [ProducesResponseType(statusCode:200,type:typeof(IEnumerable<ArticleLocationHistory>))]
-    [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<IEnumerable<ArticleLocation>>> GetStockHistory();
     
     [HttpGet("article_location")]

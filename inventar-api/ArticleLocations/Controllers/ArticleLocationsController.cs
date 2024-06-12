@@ -26,34 +26,18 @@ public class ArticleLocationsController : ArticleLocationsApiController
     {
         _logger.LogInformation("GET Rest Request: Get all article locations.");
 
-        try
-        {
-            IEnumerable<ArticleLocation> articleLocations = await _queryService.GetAllArticleLocations();
+        IEnumerable<ArticleLocation> articleLocations = await _queryService.GetAllArticleLocations();
 
-            return Ok(articleLocations);
-        }
-        catch (ItemsDoNotExist ex)
-        {
-            _logger.LogInformation($"404 Rest Response: {ex.Message}");
-            return NotFound(ex.Message);
-        }
+        return Ok(articleLocations);
     }
 
     public override async Task<ActionResult<IEnumerable<ArticleLocation>>> GetStockHistory()
     {
         _logger.LogInformation("GET Rest Request: Get stock history.");
 
-        try
-        {
-            IEnumerable<ArticleLocationHistory> alh = await _queryService.GetStockHistory();
+        IEnumerable<ArticleLocationHistory> alh = await _queryService.GetStockHistory();
 
-            return Ok(alh);
-        }
-        catch (ItemsDoNotExist ex)
-        {
-            _logger.LogInformation($"404 Rest Response: {ex.Message}");
-            return NotFound(ex.Message);
-        }
+        return Ok(alh);
     }
 
     public override async Task<ActionResult<ArticleLocation>> GetArticleLocation(int articleCode, string locationCode)

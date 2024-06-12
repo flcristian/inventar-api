@@ -26,17 +26,9 @@ public class LocationsController : LocationsApiController
     {
         _logger.LogInformation("GET Rest Request: Get all locations.");
 
-        try
-        {
-            IEnumerable<Location> locations = await _queryService.GetAllLocations();
+        IEnumerable<Location> locations = await _queryService.GetAllLocations();
 
-            return Ok(locations);
-        }
-        catch (ItemsDoNotExist ex)
-        {
-            _logger.LogInformation($"404 Rest Response: {ex.Message}");
-            return NotFound(ex.Message);
-        }
+        return Ok(locations);
     }
 
     public override async Task<ActionResult<Location>> GetLocationByCode(string code)

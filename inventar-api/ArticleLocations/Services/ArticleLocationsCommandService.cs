@@ -76,10 +76,11 @@ public class ArticleLocationsCommandService : IArticleLocationsCommandService
         }
         else
         {
+            int removed = request.StockOut - request.Necessary > 0 ? request.StockOut - request.Necessary : 0;
             UpdateArticleLocationRequest updateRequest = new UpdateArticleLocationRequest
             {
                 ArticleCode = request.ArticleCode, LocationCode = request.LocationCode,
-                Count = al.Count + request.StockIn - request.StockOut
+                Count = al.Count - removed
             };
             await _articleLocationsRepository.UpdateAsync(updateRequest);
         }

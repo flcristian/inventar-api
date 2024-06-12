@@ -10,7 +10,6 @@ public abstract class ArticlesApiController : ControllerBase
 {
     [HttpGet("all")]
     [ProducesResponseType(statusCode:200,type:typeof(IEnumerable<Article>))]
-    [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<IEnumerable<Article>>> GetArticles();
     
     [HttpGet("article/{code}")]

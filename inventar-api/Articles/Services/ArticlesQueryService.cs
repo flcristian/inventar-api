@@ -19,12 +19,7 @@ public class ArticlesQueryService : IArticlesQueryService
     public async Task<IEnumerable<Article>> GetAllArticles()
     {
         IEnumerable<Article> result = await _repository.GetAllAsync();
-
-        if (result.Count() == 0)
-        {
-            throw new ItemsDoNotExist(ExceptionMessages.ARTICLES_DO_NOT_EXIST);
-        }
-
+        
         return result;
     }
 

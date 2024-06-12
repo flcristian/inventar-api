@@ -6,6 +6,7 @@ using inventar_api.Locations.Models;
 
 namespace inventar_api.ArticleLocations.Models;
 
+[Table("articlelocationhistory")]
 public class ArticleLocationHistory
 {
     [Key]

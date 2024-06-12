@@ -1,0 +1,23 @@
+
+’csharpsquid:S6667="JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$eb31583a-da2b-4b99-b813-591de2083411
+csharpsquid:S6667N"JLogging in a catch clause should pass the caught exception as a parameter.(ÿֱ¨חJ$817c0605-c30a-47a4-b3c7-7ee5bf1b1647
+’csharpsquid:S6667S"JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$18f87da4-15f3-42bd-bce1-b488e00f47b3
+csharpsquid:S6667d"JLogging in a catch clause should pass the caught exception as a parameter.(ÿֱ¨חJ$9efc0d8a-fbc4-4b99-acb3-2e3a3549a9f2
+’csharpsquid:S6667i"JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$dabfc452-e8dd-4c95-9939-04f59fd11972
+csharpsquid:S6667z"JLogging in a catch clause should pass the caught exception as a parameter.(ÿֱ¨חJ$4d50391d-6aa3-4cc3-acde-7c03c31c0124
+’csharpsquid:S6667"JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$c0fc2851-e5ee-4e72-b105-95a771ae7840
+“csharpsquid:S6667–"JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$9352e45e-68f1-4ea8-9696-7a71102e2132
+“csharpsquid:S6667§"JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$518a0ad7-33e6-46a7-a621-eb3cfff97da2
+hcsharpsquid:S2933" Make '_queryService' 'readonly'.(ü²ׁ€‏ÿÿÿÿJ$c53cea31-7d9b-4b40-8f8a-1d7676ad8dad
+jcsharpsquid:S2933""Make '_commandService' 'readonly'.(ֵ‡®‎ÿÿÿÿJ$e3dd832e-11fe-4d26-8ec4-7db2499b08f6
+bcsharpsquid:S2933"Make '_logger' 'readonly'.(ףֶ²ותÿÿÿÿJ$066e3146-469c-48b1-a544-72132c0626dd
+„csharpsquid:S2629-"<Don't use string interpolation in logging message templates.(›ם‹ּתÿÿÿÿJ$7ec7f2e8-0235-41f3-81fa-8462e616f9c6
+„csharpsquid:S2629="<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$e02fe78e-f367-4048-829b-73210cc8f7f5
+csharpsquid:S2629N"<Don't use string interpolation in logging message templates.(ÿֱ¨חJ$6118a2db-bbf9-446b-b5c6-ff24a58cf83d
+„csharpsquid:S2629S"<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$efb05602-57f6-4216-a5ea-d0d92b7ee5c0
+csharpsquid:S2629d"<Don't use string interpolation in logging message templates.(ÿֱ¨חJ$380e809d-25da-488d-9c79-927509ba5e51
+„csharpsquid:S2629i"<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$bd8de2b0-853b-4ea9-9950-764a91169b17
+csharpsquid:S2629z"<Don't use string interpolation in logging message templates.(ÿֱ¨חJ$1b429aa7-0ca4-431b-a733-22755a1d6649
+„csharpsquid:S2629"<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$111905ac-b1a3-46a4-9241-5573770016b7
+…csharpsquid:S2629–"<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$f20733c8-2913-487c-a8ec-fe18db5f08be
+…csharpsquid:S2629§"<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$ec553db9-5059-44aa-8881-5ba755e81b1c

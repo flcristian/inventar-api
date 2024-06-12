@@ -11,7 +11,6 @@ public abstract class LocationsApiController : ControllerBase
 {
     [HttpGet("all")]
     [ProducesResponseType(statusCode:200,type:typeof(IEnumerable<Location>))]
-    [ProducesResponseType(statusCode:404,type:typeof(String))]
     public abstract Task<ActionResult<IEnumerable<Location>>> GetLocations();
     
     [HttpGet("location/{code}")]

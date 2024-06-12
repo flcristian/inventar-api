@@ -19,23 +19,13 @@ public class ArticleLocationsQueryService : IArticleLocationsQueryService
     public async Task<IEnumerable<ArticleLocation>> GetAllArticleLocations()
     {
         IEnumerable<ArticleLocation> result = await _repository.GetAllAsync();
-
-        if (result.Count() == 0)
-        {
-            throw new ItemsDoNotExist(ExceptionMessages.ARTICLE_LOCATIONS_DO_NOT_EXIST);
-        }
-
+        
         return result;
     }
 
     public async Task<IEnumerable<ArticleLocationHistory>> GetStockHistory()
     {
         IEnumerable<ArticleLocationHistory> result = await _repository.GetHistoryAsync();
-
-        if (result.Count() == 0)
-        {
-            throw new ItemsDoNotExist(ExceptionMessages.NO_STOCK_HISTORY);
-        }
 
         return result;
     }

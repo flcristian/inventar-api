@@ -1,0 +1,17 @@
+
+’csharpsquid:S6667."JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$8047a03e-52e4-496a-97a1-aaf6d4a51846
+csharpsquid:S6667?"JLogging in a catch clause should pass the caught exception as a parameter.(ÿֱ¨חJ$3836c525-7ab5-4085-8770-856bda8f3ac4
+csharpsquid:S6667D"JLogging in a catch clause should pass the caught exception as a parameter.(ÿֱ¨חJ$a97ac5a3-40f6-4b75-bc56-f232f745b6a9
+csharpsquid:S6667U"JLogging in a catch clause should pass the caught exception as a parameter.(ÿֱ¨חJ$17c24181-1d46-4e30-bf01-a3671e3898a3
+’csharpsquid:S6667Z"JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$4a8985fe-7a04-4afa-adc7-6964665071a1
+’csharpsquid:S6667k"JLogging in a catch clause should pass the caught exception as a parameter.(ׁ¯לסתÿÿÿÿJ$f33c4965-6eb9-4bde-9efd-56f96773268a
+hcsharpsquid:S2933" Make '_queryService' 'readonly'.(¬’Ú¬ûÿÿÿÿJ$22d49e56-63d5-42e5-b317-704988290161
+ecsharpsquid:S2933""Make '_commandService' 'readonly'.(ְא‚J$f8bd8115-942f-4f46-be13-da66585c61d0
+]csharpsquid:S2933"Make '_logger' 'readonly'.(Þ¦ׂ¾J$6b355f90-d8ec-4257-9560-9dc480c8a1a2
+csharpsquid:S2629$"<Don't use string interpolation in logging message templates.(Ê–›ßJ$de15804d-2431-49e2-8fb6-b06635f2f9e3
+„csharpsquid:S2629."<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$6454fe16-49b3-4da3-9d8d-75dc7b69d0a7
+csharpsquid:S2629?"<Don't use string interpolation in logging message templates.(ÿֱ¨חJ$d84ccae2-bfb9-4d01-9f8c-e64760cda117
+csharpsquid:S2629D"<Don't use string interpolation in logging message templates.(ÿֱ¨חJ$abef9335-4892-49e1-a590-da91f01f3bd2
+csharpsquid:S2629U"<Don't use string interpolation in logging message templates.(ÿֱ¨חJ$68c5544f-71b5-4aa4-a27b-f421331de117
+„csharpsquid:S2629Z"<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$d6410a9d-b596-4137-9a04-954413e26c2f
+„csharpsquid:S2629k"<Don't use string interpolation in logging message templates.(ׁ¯לסתÿÿÿÿJ$74b3d5b5-caab-4b39-9d24-13f1a7af8be1
