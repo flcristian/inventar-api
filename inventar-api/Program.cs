@@ -12,6 +12,8 @@ using inventar_api.Locations.Repository;
 using inventar_api.Locations.Repository.Interfaces;
 using inventar_api.Locations.Services;
 using inventar_api.Locations.Services.Interfaces;
+using inventar_api.Users.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace inventar_api;
@@ -53,6 +55,10 @@ public class Program
         builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseMySql(builder.Configuration.GetConnectionString("Default")!,
                 new MySqlServerVersion(new Version(8, 0, 21))));
+        
+        builder.Services.AddIdentity<User, IdentityRole<int>>()
+            .AddEntityFrameworkStores<AppDbContext>()
+            .AddDefaultTokenProviders();
 
         builder.Services.AddFluentMigratorCore()
             .ConfigureRunner(rb => rb

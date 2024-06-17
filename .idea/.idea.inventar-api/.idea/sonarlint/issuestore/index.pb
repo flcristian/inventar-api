@@ -47,3 +47,13 @@ Q
 !inventar-api/Data/AppDbContext.cs,1\f\1fbd6c76da33a8984dcb33ea66cb9ac1864787d4
 n
 >inventar-api/ArticleLocations/Models/ArticleLocationHistory.cs,f\5\f58ff1ce14eda8d969bcffaa75684e0860d70c65
+„
+Tinventar-api/ArticleLocations/Services/Interfaces/IArticleLocationsCommandService.cs,8\3\83f43b7f8301d0f76de9aee1872ec1b37bbf80f4
+Q
+!inventar-api/Users/Models/User.cs,0\1\01864a584b2f21808d082bfbcf96a81dbe78f2c9
+o
+?inventar-api/Users/Controllers/Interfaces/UsersApiController.cs,1\e\1e4c82ee1a4d9cf0bffe92597f64834445edf064
+\
+,inventar-api/Users/Models/RegisterRequest.cs,8\2\8252e07475de78efa1876e81db93df0013f35efd
+a
+1inventar-api/Users/Controllers/UsersController.cs,7\f\7ff149db35a554ce0b28348636f6741fb5a88db5

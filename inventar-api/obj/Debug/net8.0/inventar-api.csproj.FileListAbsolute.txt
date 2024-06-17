@@ -138,3 +138,17 @@ D:\mycode\projects\inventar\inventar-api\inventar-api\obj\Debug\net8.0\refint\in
 D:\mycode\projects\inventar\inventar-api\inventar-api\obj\Debug\net8.0\inventar-api.pdb
 D:\mycode\projects\inventar\inventar-api\inventar-api\obj\Debug\net8.0\inventar-api.genruntimeconfig.cache
 D:\mycode\projects\inventar\inventar-api\inventar-api\obj\Debug\net8.0\ref\inventar-api.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\mycode\projects\inventar\inventar-api\inventar-api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
