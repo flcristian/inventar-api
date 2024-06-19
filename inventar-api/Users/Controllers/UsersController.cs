@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using inventar_api.Users.Controllers.Interfaces;
 using inventar_api.Users.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,7 @@ public class UsersController(UserManager<User> userManager, SignInManager<User> 
         throw new NotImplementedException();
     }
 
+    [Authorize]
     public override async Task<ActionResult<User>> GetUser(int id)
     {
         throw new NotImplementedException();
@@ -26,16 +28,24 @@ public class UsersController(UserManager<User> userManager, SignInManager<User> 
 
     public override async Task<ActionResult<User>> Register(RegisterRequest request)
     {
-        User user = new User
+        var random = new Random();
+        var userName = $"user{random.Next(1000, 9999)}";
+        var email = $"{userName}@test.com";
+        var dateOfBirth = new DateTime(random.Next(1980, 2010), random.Next(1, 12), random.Next(1, 28));
+        var name = $"Name{random.Next(1000, 9999)}";
+        var age = random.Next(18, 30);
+        var grade = random.Next(1, 12);
+        var user = new User
         {
-            UserName = request.Name,
-            Email = request.Email,
-            Name = request.Name,
-            Age = request.Age,
-            Gender = request.Gender,
+            UserName = userName,
+            Email = email,
+            Name = name,
+            Age = age,
+            Gender = "RERE",
+            
         };
 
-        var result = await userManager.CreateAsync(user, request.Password);
+        var result = await userManager.CreateAsync(user,"@Test1234");
         if (result.Succeeded)
         {
             var token = GenerateJwtToken();

@@ -14,9 +14,8 @@ public class TablesInitialization : Migration
         CreateIndexes();
         CreateForeignKeys();
         
-        // Users table
         Create.Table("Users")
-            .WithColumn("Id").AsString(256).PrimaryKey().PrimaryKey()
+            .WithColumn("Id").AsInt32().PrimaryKey().Identity()
             .WithColumn("UserName").AsString(256).Nullable()
             .WithColumn("NormalizedUserName").AsString(256).Nullable()
             .WithColumn("Email").AsString(256).Nullable()
@@ -36,54 +35,51 @@ public class TablesInitialization : Migration
             .WithColumn("Gender").AsString().NotNullable()
             .WithColumn("Discriminator").AsString().NotNullable();
 
-            // AspNetRoles table
-            Create.Table("AspNetRoles")
-                .WithColumn("Id").AsString(256).PrimaryKey()
-                .WithColumn("Name").AsString(256).Nullable()
-                .WithColumn("NormalizedName").AsString(256).Nullable()
-                .WithColumn("ConcurrencyStamp").AsString().Nullable();
+        Create.Table("AspNetRoles")
+            .WithColumn("Id").AsInt32().PrimaryKey().Identity()
+            .WithColumn("Name").AsString(256).Nullable()
+            .WithColumn("NormalizedName").AsString(256).Nullable()
+            .WithColumn("ConcurrencyStamp").AsString().Nullable();
+        
+        Create.Table("AspNetUserRoles")
+            .WithColumn("UserId").AsInt32().NotNullable()
+            .WithColumn("RoleId").AsInt32().NotNullable()
+            .ForeignKey("FK_AspNetUserRoles_Users", "Users", "Id")
+            .ForeignKey("FK_AspNetUserRoles_AspNetRoles", "AspNetRoles", "Id");
 
-            // AspNetUserRoles table
-            Create.Table("AspNetUserRoles")
-                .WithColumn("UserId").AsString(256).NotNullable()
-                .WithColumn("RoleId").AsString(256).NotNullable()
-                .ForeignKey("FK_AspNetUserRoles_Users", "Users", "Id")
-                .ForeignKey("FK_AspNetUserRoles_AspNetRoles", "AspNetRoles", "Id");
+        Create.Table("AspNetRoleClaims")
+            .WithColumn("Id").AsInt32().PrimaryKey().Identity()
+            .WithColumn("RoleId").AsInt32().NotNullable()
+            .WithColumn("ClaimType").AsString(255).Nullable()
+            .WithColumn("ClaimValue").AsInt32().Nullable()
+            .ForeignKey("FK_AspNetRoleClaims_AspNetRoles", "AspNetRoles", "Id");
 
-            // AspNetRoleClaims table
-            Create.Table("AspNetRoleClaims")
-                .WithColumn("Id").AsInt32().PrimaryKey().Identity()
-                .WithColumn("RoleId").AsString(256).NotNullable()
-                .WithColumn("ClaimType").AsString().Nullable()
-                .WithColumn("ClaimValue").AsString().Nullable()
-                .ForeignKey("FK_AspNetRoleClaims_AspNetRoles", "AspNetRoles", "Id");
 
-            // AspNetUserClaims table
-            Create.Table("AspNetUserClaims")
-                .WithColumn("Id").AsInt32().PrimaryKey().Identity()
-                .WithColumn("UserId").AsString(256).NotNullable()
-                .WithColumn("ClaimType").AsString().Nullable()
-                .WithColumn("ClaimValue").AsString().Nullable()
-                .ForeignKey("FK_AspNetUserClaims_Users", "Users", "Id");
+        Create.Table("AspNetUserClaims")
+            .WithColumn("Id").AsInt32().PrimaryKey().Identity()
+            .WithColumn("UserId").AsInt32().NotNullable()
+            .WithColumn("ClaimType").AsString().Nullable()
+            .WithColumn("ClaimValue").AsInt32().Nullable()
+            .ForeignKey("FK_AspNetUserClaims_Users", "Users", "Id");
 
-            // AspNetUserLogins table
-            Create.Table("AspNetUserLogins")
-                .WithColumn("LoginProvider").AsString(256).PrimaryKey()
-                .WithColumn("ProviderKey").AsString(256).PrimaryKey()
-                .WithColumn("ProviderDisplayName").AsString().Nullable()
-                .WithColumn("UserId").AsString(256).NotNullable()
-                .ForeignKey("FK_AspNetUserLogins_Users", "Users", "Id");
+        Create.Table("AspNetUserLogins")
+            .WithColumn("LoginProvider").AsString(256).PrimaryKey()
+            .WithColumn("ProviderKey").AsString(256).PrimaryKey()
+            .WithColumn("ProviderDisplayName").AsString().Nullable()
+            .WithColumn("UserId").AsInt32().NotNullable()
+            .ForeignKey("FK_AspNetUserLogins_Users", "Users", "Id");
 
-            // AspNetUserTokens table
-            Create.Table("AspNetUserTokens")
-                .WithColumn("UserId").AsString(256).PrimaryKey()
-                .WithColumn("LoginProvider").AsString(256).PrimaryKey()
-                .WithColumn("Name").AsString(256).PrimaryKey()
-                .WithColumn("Value").AsString().Nullable()
-                .ForeignKey("FK_AspNetUserTokens_Users", "Users", "Id");
-
+        Create.Table("AspNetUserTokens")
+            .WithColumn("UserId").AsInt32().PrimaryKey()
+            .WithColumn("LoginProvider").AsString(256).PrimaryKey()
+            .WithColumn("Name").AsString(256).PrimaryKey()
+            .WithColumn("Value").AsInt32().Nullable()
+            .ForeignKey("FK_AspNetUserTokens_Users", "Users", "Id");
+        
+        CreateRoles();
+        AddPermissionsToRoles();
     }
-    
+
     public override void Down()
     {
         Delete.ForeignKey("FK_ArticleLocations_Location").OnTable("articlelocations");
@@ -101,7 +97,8 @@ public class TablesInitialization : Migration
         Delete.Table("AspNetUserRoles");
         Delete.Table("AspNetRoles");
         Delete.Table("Users");
-
+        RemovePermissionsFromRoles();
+        RemoveRoles();
     }
 
     private void CreateArticlesTable()
@@ -138,5 +135,38 @@ public class TablesInitialization : Migration
     {
         Create.ForeignKey("FK_ArticleLocations_Article").FromTable("articlelocations").ForeignColumn("articleCode").ToTable("articles").PrimaryColumn("code").OnDelete(Rule.Cascade);
         Create.ForeignKey("FK_ArticleLocations_Location").FromTable("articlelocations").ForeignColumn("locationCode").ToTable("locations").PrimaryColumn("code").OnDelete(Rule.Cascade);
+    }
+    
+    private void CreateRoles()
+    {
+        Insert.IntoTable("AspNetRoles").Row(new { Name = "Admin", NormalizedName = "ADMIN" });
+        Insert.IntoTable("AspNetRoles").Row(new { Name = "Editor", NormalizedName = "EDITOR" });
+    }
+
+    private void AddPermissionsToRoles()
+    {
+        Insert.IntoTable("AspNetRoleClaims").Row(new {
+            RoleId = "1", 
+            ClaimType = "Permission",
+            ClaimValue = "1"
+        });
+
+        Insert.IntoTable("AspNetRoleClaims").Row(new {
+            RoleId = "2",
+            ClaimType = "Permission",
+            ClaimValue = "1"
+        });
+    }
+
+    private void RemovePermissionsFromRoles()
+    {
+        Delete.FromTable("AspNetRoleClaims").Row(new { ClaimValue = "CanEditPosts" });
+        Delete.FromTable("AspNetRoleClaims").Row(new { ClaimValue = "CanViewFinancials" });
+    }
+
+    private void RemoveRoles()
+    {
+        Delete.FromTable("AspNetRoles").Row(new { NormalizedName = "ADMIN" });
+        Delete.FromTable("AspNetRoles").Row(new { NormalizedName = "EDITOR" });
     }
 }
