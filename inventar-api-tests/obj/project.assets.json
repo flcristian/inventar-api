@@ -10266,23 +10266,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bogda\\.nuget\\packages\\": {},
+    "C:\\Users\\qflor\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bogda\\Desktop\\inventar-app-adi\\inventar-api-tests\\inventar-api-tests.csproj",
+      "projectUniqueName": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api-tests\\inventar-api-tests.csproj",
       "projectName": "inventar-api-tests",
-      "projectPath": "C:\\Users\\bogda\\Desktop\\inventar-app-adi\\inventar-api-tests\\inventar-api-tests.csproj",
-      "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bogda\\Desktop\\inventar-app-adi\\inventar-api-tests\\obj\\",
+      "projectPath": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api-tests\\inventar-api-tests.csproj",
+      "packagesPath": "C:\\Users\\qflor\\.nuget\\packages\\",
+      "outputPath": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api-tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\qflor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10298,8 +10298,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\bogda\\Desktop\\inventar-app-adi\\inventar-api\\inventar-api.csproj": {
-              "projectPath": "C:\\Users\\bogda\\Desktop\\inventar-app-adi\\inventar-api\\inventar-api.csproj"
+            "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api\\inventar-api.csproj": {
+              "projectPath": "D:\\mycode\\projects\\inventar\\inventar-api\\inventar-api\\inventar-api.csproj"
             }
           }
         }
@@ -10308,11 +10308,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10372,7 +10367,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

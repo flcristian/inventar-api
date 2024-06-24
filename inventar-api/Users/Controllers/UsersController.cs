@@ -26,44 +26,36 @@ public class UsersController(UserManager<User> userManager, SignInManager<User> 
         throw new NotImplementedException();
     }
 
-    public override async Task<ActionResult<User>> Register(RegisterRequest request)
+    public override async Task<ActionResult<RegisterResponse>> Register(RegisterRequest request)
     {
-        var random = new Random();
-        var userName = $"user{random.Next(1000, 9999)}";
-        var email = $"{userName}@test.com";
-        var dateOfBirth = new DateTime(random.Next(1980, 2010), random.Next(1, 12), random.Next(1, 28));
-        var name = $"Name{random.Next(1000, 9999)}";
-        var age = random.Next(18, 30);
-        var grade = random.Next(1, 12);
         var user = new User
         {
-            UserName = userName,
-            Email = email,
-            Name = name,
-            Age = age,
-            Gender = "RERE",
-            
+            UserName = request.Name,
+            Email = request.Email,
+            Name = request.Name,
+            Age = 0,
+            Gender = "None"
         };
 
-        var result = await userManager.CreateAsync(user,"@Test1234");
+        var result = await userManager.CreateAsync(user,request.Password);
         if (result.Succeeded)
         {
             var token = GenerateJwtToken();
 
-            return Ok(new { Token = token });
+            return Ok(new { Token = token, User = await userManager.FindByEmailAsync(user.Email) });
         }
 
         return BadRequest(result.Errors);
     }
 
-    public override async Task<ActionResult<User>> Login(LoginRequest request)
+    public override async Task<ActionResult<LoginResponse>> Login(LoginRequest request)
     {
         var user = await userManager.FindByEmailAsync(request.Email);
 
         if (user != null && await userManager.CheckPasswordAsync(user, request.Password))
         {
             var token = GenerateJwtToken();
-            return Ok(new { Token = token });
+            return Ok(new { Token = token, User = user });
         }
         return Unauthorized();
     }

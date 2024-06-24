@@ -57,3 +57,11 @@ o
 ,inventar-api/Users/Models/RegisterRequest.cs,8\2\8252e07475de78efa1876e81db93df0013f35efd
 a
 1inventar-api/Users/Controllers/UsersController.cs,7\f\7ff149db35a554ce0b28348636f6741fb5a88db5
+Y
+)inventar-api/appsettings.Development.json,5\b\5b6c2b3f3c4ebdf8d473dcee6b1e3bfe2915bb68
+Z
+*inventar-api/Users/Models/LoginResponse.cs,f\e\fed781257d396c7fb4a6afd2b3421739d4a5eb00
+Y
+)inventar-api/Users/Models/LoginRequest.cs,7\8\78e0639dcac0397ca6851e872b86a5c38123eff7
+]
+-inventar-api/Users/Models/RegisterResponse.cs,6\4\64586fcfd2b90bfe41d9892537f285cc13bb0017

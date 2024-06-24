@@ -1,11 +1,13 @@
 using inventar_api.ArticleLocations.DTOs;
 using inventar_api.ArticleLocations.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inventar_api.ArticleLocations.Controllers.Interfaces;
 
 [ApiController]
 [Route("api/v1/[controller]")]
+[Authorize]
 public abstract class ArticleLocationsApiController : ControllerBase
 {
     [HttpGet("all")]

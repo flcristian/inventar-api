@@ -21,10 +21,10 @@ public abstract class UsersApiController: ControllerBase
     [HttpPost("register")]
     [ProducesResponseType(statusCode: 200, type: typeof(User))]
     [ProducesResponseType(statusCode: 400, type: typeof(string))]
-    public abstract Task<ActionResult<User>> Register([FromBody]RegisterRequest request);
+    public abstract Task<ActionResult<RegisterResponse>> Register([FromBody]RegisterRequest request);
 
     [HttpPost("login")]
     [ProducesResponseType(statusCode: 200, type: typeof(User))]
     [ProducesResponseType(statusCode: 401, type: typeof(string))]
-    public abstract Task<ActionResult<User>> Login([FromBody]LoginRequest request);
+    public abstract Task<ActionResult<LoginResponse>> Login([FromBody]LoginRequest request);
 }
