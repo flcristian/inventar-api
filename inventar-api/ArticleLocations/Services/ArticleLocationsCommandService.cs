@@ -139,10 +139,11 @@ public class ArticleLocationsCommandService : IArticleLocationsCommandService
         ArticleLocation al = (await _articleLocationsRepository.GetAsync(new GetArticleLocationRequest
             { ArticleCode = history.ArticleCode, LocationCode = history.LocationCode }))!;
         
+        int removed = history.StockOut - history.Necessary > 0 ? history.StockOut - history.Necessary : 0;
         UpdateArticleLocationRequest updateRequest = new UpdateArticleLocationRequest
         {
             ArticleCode = history.ArticleCode, LocationCode = history.LocationCode,
-            Count = al.Count - history.StockIn + history.StockOut
+            Count = al.Count + removed
         };
         
         if (updateRequest.Count == 0)
